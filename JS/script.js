@@ -17,7 +17,6 @@ function showPage() {
 window.onload = function() {
     if (!('visited' in sessionStorage)) {
         myFunction();
-        myVar = setTimeout(showPage, 3000);
         sessionStorage.setItem('visited', true);
     } else {
         showPage();
@@ -36,11 +35,10 @@ document.querySelectorAll('.read-more').forEach(item => {
     item.addEventListener('click', function($event) {
         var element = $event.target.previousElementSibling;
         $(element).slideToggle(500);
-        console.log($event);
-        if ($event.target.innerText === 'Read more') {
-            $event.target.innerText = 'Read less';
+        if ($event.target.innerText === 'Skaityti daugiau') {
+            $event.target.innerText = 'Skaityti mažiau';
         } else {
-            $event.target.innerText = 'Read more';
+            $event.target.innerText = 'Skaityti daugiau';
             $event.target.nextSibling.classList.remove('hide');
         }
     });
@@ -53,5 +51,13 @@ document.querySelectorAll('.read-more').forEach(item => {
     item.addEventListener('mouseleave', ($event) => {
         $event.target.nextSibling.classList.add('arrow-right-no-margin');
         $event.target.nextSibling.classList.remove('arrow-right');
+    });
+});
+
+document.querySelector('.landing-link').addEventListener('click', () => {
+    const y = document.getElementById('about-us').getBoundingClientRect().top + window.pageYOffset - 123;
+    window.scrollTo({
+        top: y,
+        behavior: 'smooth'
     });
 });

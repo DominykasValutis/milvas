@@ -487,3 +487,67 @@ a:hover {
 		width: 100%;
 	}
 }
+
+.full-height {
+	height: 123px;
+}
+
+.landing-page {
+	height: 100vh;
+}
+
+.landing-image {
+	background-image: url(../images/augustas-mickus-zEmhJ51HVvQ-unsplash.jpg);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* background-attachment: fixed; */
+	height: 100%;
+}
+
+.landing-heading {
+	display: block;
+	margin: 0 0;
+	font-size: 3rem;
+	color: #f1f1f1;
+	letter-spacing: 0.5rem;
+	height: 80px;
+	padding: 0 30px;
+	border-bottom: solid white 1px;
+	margin-bottom: 3rem;
+}
+
+.landing-link {
+	width: 160px;
+	display: block;
+	height: 30px;
+	text-align: center;
+	align-items: center;
+	border: solid #f1f1f1 1px;
+	color: #f1f1f1 !important;
+	cursor: pointer;
+}
+
+.landing-link:hover {
+	background-color: #f1f1f1;
+	color: #8E9BAE !important;
+	text-decoration: none;
+}
+
+.wrapper {
+	position: absolute;
+	top: 15%;
+	right: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-item:hover {
+	color: rgba(255,255,255,.5) !important;
+}
+
+.nav-item {
+	color: #f1f1f1 !important;
+}
